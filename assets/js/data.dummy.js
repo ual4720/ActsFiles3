@@ -1,0 +1,4 @@
+var people = [["1", "Andrew", "Burke"], ["2", "Alison", "Burke"],["3", "Joe", "Martin"],["4", "Willie", "Riese"], ["5", "Ethan", "Haworth"]];
+var families = [["1", "Burke Family"], ["2", "Martin Family"], ["3", "Haworth Family"], ["4", "Riese Family"]];
+var events = [["1", "Acts After School"], ["2", "Leadership Development (MS)"], ["3", "Leadership Development (HS)"]];
+var addresses = [["1", "1024 Pine St. W.", "", "The Dalles", "OR", "97058"], ["2", "900 Court Street", "Apartment 303", "The Dalles", "OR", "97058"], ["3", "Line 1", "Line 2", "Hood River", "OR", "97031"], ["4", "517 3rd Ave", "", "Dallesport", "WA", "98617"]];
