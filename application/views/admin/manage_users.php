@@ -2,7 +2,7 @@
 	<table class="w3-table w3-striped w3-bordered w3-usertable">
 		<thead>
 			<tr class="w3-theme">
-			  <th class="w3-center"><a href="#" target="_blank" title="Assign User"><i class="fa fa-plus-square-o"></i> Assign User</a></th>
+			  <th class="w3-center"><a href="/manage_users/assign" target="_blank" title="Assign User"><i class="fa fa-plus-square-o"></i> New User</a></th>
 			  <th>User</th>
 			  <th class="w3-center">Last Login</th>
 			  <th class="w3-center">Actions</th>

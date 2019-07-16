@@ -16,7 +16,7 @@
 			$filter = array("active" => TRUE);
 			$data["people"] = $this->people_model->get_people($filter);
 			
-			$this->load->view("templates/header_small", $data);
+			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("people/index", $data);
 			$this->load->view("templates/footer", $data);
@@ -34,7 +34,7 @@
 			
 			$data["title"] = "View ". $data["person"]["first_name"] . "'s Profile";
 			
-			$this->load->view("templates/header_small", $data);
+			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("people/person", $data);
 			$this->load->view("templates/footer", $data);

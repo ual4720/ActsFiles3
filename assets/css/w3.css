@@ -86,6 +86,14 @@ html{overflow-x:hidden}
 
 /*site header properties*/
 #w3-site-navigation, #w3-site-name, #w3-site-logo, #w3-site-slogan {height:auto;}
+#nav-side-top
+{
+	position: fixed !important;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
 .w3-top-menu {width: 100% !important;}
 
 .w3-div-left {float: left !important;}

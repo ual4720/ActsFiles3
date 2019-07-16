@@ -13,7 +13,7 @@
 	  </div>
 	  <div class="w3-container w3-padding w3-right-align">
 		<!--<button class="w3-btn w3-theme" type="button" onclick="">View Person</button>-->
-		<a class="w3-btn w3-theme" href="/manage_users" target="_self">Cancel</a>
+		<a class="w3-btn w3-theme" href="<?php echo $base_url; ?>manage_users" target="_self">Cancel</a>
 		<a id="btnViewPerson" class="w3-btn w3-theme" href="#" target="_self">Set As User</a>
 		</div>
 	</div>
@@ -24,6 +24,6 @@
 	});
 
 	$('#DropdownSelectPerson').on("change", function(e) {
-		document.getElementById("btnViewPerson").href = "/manage_users/set_assign/" + $("#DropdownSelectPerson").val();
+		document.getElementById("btnViewPerson").href = "<?php echo $base_url; ?>manage_users/set_assign/" + $("#DropdownSelectPerson").val();
 	});
 </script>

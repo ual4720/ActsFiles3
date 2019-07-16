@@ -4,15 +4,14 @@
 		public function __construct()
 		{
 			parent::__construct();
-			$this->data["top_menu"] = $this->nav_model->get_nav("top_menu", "/admin");
+			$this->data["top_menu"] = $this->nav_model->get_nav("top_menu", "admin");
 		}
 		
 		public function index($page = "admin"){
 			
 			//set the page name
 			$data["title"] = ucfirst($page); // Capitalize the first letter
-			if(isset($data["top_menu"]))
-				echo" Hello World";
+			$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 			
 			$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);

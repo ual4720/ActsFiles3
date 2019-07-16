@@ -23,6 +23,6 @@
 	});
 
 	$('#DropdownSelectPerson').on("change", function(e) {
-		document.getElementById("btnViewPerson").href = "/person/" + $("#DropdownSelectPerson").val();
+		document.getElementById("btnViewPerson").href = "person/" + $("#DropdownSelectPerson").val();
 	});
 </script>

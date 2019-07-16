@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://localhost/actsfiles3/';
+//$config['base_url'] = 'https://localhost/actsfiles3/';
+$config['base_url'] = 'https://10.73.0.228/actsfiles3/';
 
 /*
 |--------------------------------------------------------------------------

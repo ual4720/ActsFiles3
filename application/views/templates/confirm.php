@@ -15,7 +15,7 @@
 		<?php endforeach; ?>
 		<?php endif; ?>
 		<div class="w3-container w3-center">
-			<a href="<?php if(!isset($return_path)) $return_path = "/"; echo $return_path; ?>" class="w3-btn w3-theme" title="Cancel">Cancel</a>
+			<a href="<?php if(!isset($return_path)) $return_path = $base_url; echo $return_path; ?>" class="w3-btn w3-theme" title="Cancel">Cancel</a>
 			<input type="submit" class="w3-btn w3-theme" name="confirm" <?php if(!isset($target)) echo "disabled"; ?> value="Yes" />
 		</div>
 	</form>

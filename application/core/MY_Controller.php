@@ -36,9 +36,11 @@
 			$data["theme"] = $this->theme_model->get_theme();
 			
 			//include assets for pages
+			$data["base_url"] = $this->config->item("base_url");
 			$data["css"] = $this->config->item("css");
 			$data["js"] = $this->config->item("js");
 			$data["images"] = $this->config->item("images");
+			$data["profiles"] = $this->config->item("profiles");
 			
 			//$data = array(
 			//	"css" => $this->config->item("css"),
@@ -47,8 +49,18 @@
 			//);
 			
 			//Load the side nav for all pages
-			$data["page"] = "/".$this->uri->segment(1);
-			$this->load->view("templates/side_menu", $data);
+			//$data["page"] = "/".$this->uri->segment(2);
+			//$this->load->view("templates/side_menu", $data);
+			if(base_url(uri_string()) == $this->config->item("base_url"))
+			{
+				$this->load->view("templates/header", $data);
+				$this->load->view("templates/side_menu", $data);
+			}
+			else
+			{
+				$this->load->view("templates/header_small", $data);
+				$this->load->view("templates/side_menu", $data);
+			}
 			
 		}
 	}

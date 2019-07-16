@@ -5,7 +5,7 @@
 		<h3><?php echo $person["first_name"]; ?> <?php echo $person["last_name"]; ?></h3>
 		<h4><?php echo $person["nickname"]; ?></h3>
 		<!--<i class="fa fa-user w3-margin-bottom w3-text-theme" style="font-size:120px"></i>-->
-		<img src="/assets/images/people/<?php echo mt_rand(0, 8); ?>.jpg" class="w3-profile-100" title="<?php echo $person["first_name"] . " " . $person["last_name"]; ?>" />
+		<img src="<?php echo $profiles; echo mt_rand(0, 8); ?>.jpg" class="w3-profile-100" title="<?php echo $person["first_name"] . " " . $person["last_name"]; ?>" />
 		<p>Age: <?php echo $person["age"]; ?><?php echo date("(m-d-Y)", strtotime($person["birthday"])); ?></p>
 		<p>Emergency Contact: </p>
 		<p>1st Contact</p>
@@ -15,7 +15,10 @@
 	<?php if($person["user"]): ?>
 	<div class="w3-row-padding">&nbsp;</div>
 	<div class="w3-card w3-container" style="min-height:350px">
-		<h3><?php echo $person["first_name"]; ?>'s Latest User Activity</h3>
+		<h3><?php echo $person["first_name"]; ?>'s User Actions & History</h3>
+		<a class="w3-btn w3-theme" href="#">Change Password</a>
+		<a class="w3-btn w3-theme" href="<?php echo $base_url; ?>manage_users/disable/<?php echo $person["id"]; ?>">Disable Account</a>
+		<a class="w3-btn w3-theme" href="#">View Activity Log</a>
 	</div>
 	<?php endif; ?>
 </div>
@@ -218,7 +221,7 @@
 			</thead>
 			<tbody>
 			<tr>
-				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="./images/google_drive_icons/gdoc.png" class="attachment-icon" /></a></td>
+				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="<?php echo $images; ?>google_drive_icons/gdoc.png" class="attachment-icon" /></a></td>
 				<td>Mariners/Wild Waves - 2019</td>
 				<td>Permission Slip</td>
 				<td class="w3-center">04/10/2019</td>
@@ -228,7 +231,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="./images/google_drive_icons/gsheet.png" class="attachment-icon" /></a></td>
+				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="<?php echo $images; ?>google_drive_icons/gsheet.png" class="attachment-icon" /></a></td>
 				<td>Detailed List</td>
 				<td>Other</td>
 				<td class="w3-center">06/24/2017</td>
@@ -238,7 +241,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="./images/google_drive_icons/word.png" class="attachment-icon" /></a></td>
+				<td class="w3-center"><a href="" target="_blank" title="Open Attachment"><img src="<?php echo $images; ?>google_drive_icons/word.png" class="attachment-icon" /></a></td>
 				<td>2018 Leadership Development Agreement</td>
 				<td>Volunteer Agreement</td>
 				<td class="w3-center">12/24/2017</td>
