@@ -22,12 +22,12 @@
 			if($this->form_validation->run() === FALSE)
 			{
 				//set data
-				$data["target"] = "manage_users/disable/".$user;
+				$data["target"] = $this->config->item("base_url")."manage_users/disable/".$user;
 				$data["person"] = $this->people_model->get_people(FALSE, $user);
 				
 				$data["message"] = "Do you wish to disable " . $data["person"]["first_name"] . "'s User Access?";
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("templates/confirm", $data);
 				$this->load->view("templates/footer", $data);
@@ -39,7 +39,7 @@
 				
 				$data["return_path"] = $this->config->item("base_url")."manage_users";
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				if($result)
 					$this->load->view("templates/success", $data);
@@ -60,7 +60,7 @@
 			$data["title"] = ucfirst($page); // Capitalize the first letter
 			$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 			
-			$this->load->view("templates/header_small", $data);
+			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("admin/manage_users/assign", $data);
 			$this->load->view("templates/footer", $data);
@@ -76,7 +76,7 @@
 			$data["person"] = $this->people_model->get_people(FALSE, $user);
 			
 			//Form actions
-			$data["target"] = "manage_users/set_assign/".$user;
+			$data["target"] = $this->config->item("base_url")."manage_users/set_assign/".$user;
 			$data["return_path"] = $this->config->item("base_url")."manage_users/assign";
 			
 			//Form properties
@@ -101,7 +101,7 @@
 					array("name" => "confirm_password", "label" => "Confirm Password: ", "required" => "required", "type" => "password")
 				);
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("templates/confirm", $data);
 				$this->load->view("templates/footer", $data);
@@ -113,14 +113,14 @@
 					
 					$data["return_path"] = $this->config->item("base_url")."manage_users";
 					$data["message"] = "<p>".$data["person"]["first_name"] . " was successfully set as a user.</p><p>You will need to provide the user their username and password before they can login.</p>";
-					$this->load->view("templates/header_small", $data);
+					//$this->load->view("templates/header_small", $data);
 					$this->load->view("templates/top_menu", $data);
 					$this->load->view("templates/success", $data);
 					$this->load->view("templates/footer", $data);
 				}
 				else
 				{
-					$this->load->view("templates/header_small", $data);
+					//$this->load->view("templates/header_small", $data);
 					$this->load->view("templates/top_menu", $data);
 					$this->load->view("templates/failed", $data);
 					$this->load->view("templates/footer", $data);

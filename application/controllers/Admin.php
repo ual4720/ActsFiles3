@@ -13,7 +13,7 @@
 			$data["title"] = ucfirst($page); // Capitalize the first letter
 			$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 			
-			$this->load->view("templates/header_small", $data);
+			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("admin/index", $data);
 			$this->load->view("templates/footer", $data);
@@ -31,7 +31,7 @@
 				$data["title"] = ucfirst($page); // Capitalize the first letter
 				$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("admin/manage_links", $data);
 				$this->load->view("templates/footer", $data);
@@ -48,8 +48,8 @@
 				$data["side_menu"] = $this->nav_model->get_nav("side_menu");
 				$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 				
-				$this->load->view("templates/side_menu", $data);
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/side_menu", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("templates/success", $data);
 				$this->load->view("admin/manage_links", $data);
@@ -69,7 +69,7 @@
 			$data["title"] = ucfirst($page); // Capitalize the first letter
 			$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 			
-			$this->load->view("templates/header_small", $data);
+			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("admin/manage_users/index", $data);
 			$this->load->view("templates/footer", $data);
@@ -91,7 +91,7 @@
 				$data["title"] = ucfirst($page); // Capitalize the first letter
 				$data["top_menu"] = $this->nav_model->get_nav("top_menu");
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("admin/manage_organization", $data);
 				$this->load->view("templates/footer", $data);
@@ -106,7 +106,7 @@
 				$this->organization_model->set_organization();
 				$data["organization"] = $this->organization_model->get_organization();
 				
-				$this->load->view("templates/header_small", $data);
+				//$this->load->view("templates/header_small", $data);
 				$this->load->view("templates/top_menu", $data);
 				$this->load->view("templates/success", $data);
 				$this->load->view("admin/manage_organization", $data);
