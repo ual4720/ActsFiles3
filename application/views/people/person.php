@@ -3,7 +3,7 @@
 <div class="w3-third">
 	<div class="w3-card w3-container" style="min-height:400px">
 		<h3><?php echo $person["first_name"]; ?> <?php echo $person["last_name"]; ?></h3>
-		<h4><?php echo $person["nickname"]; ?></h3>
+		<h4><?php echo $person["nickname"]; ?></h4>
 		<!--<i class="fa fa-user w3-margin-bottom w3-text-theme" style="font-size:120px"></i>-->
 		<img src="<?php echo $profiles; echo mt_rand(0, 8); ?>.jpg" class="w3-profile-100" title="<?php echo $person["first_name"] . " " . $person["last_name"]; ?>" />
 		<p>Age: <?php echo $person["age"]; ?><?php echo date("(m-d-Y)", strtotime($person["birthday"])); ?></p>
@@ -12,15 +12,6 @@
 		<p>2nd Contact</p>
 		<p>3rd Contact</p>
 	</div>
-	<?php if($person["user"]): ?>
-	<div class="w3-row-padding">&nbsp;</div>
-	<div class="w3-card w3-container" style="min-height:350px">
-		<h3><?php echo $person["first_name"]; ?>'s User Actions & History</h3>
-		<a class="w3-btn w3-theme" href="#">Change Password</a>
-		<a class="w3-btn w3-theme" href="<?php echo $base_url; ?>manage_users/disable/<?php echo $person["id"]; ?>">Disable Account</a>
-		<a class="w3-btn w3-theme" href="#">View Activity Log</a>
-	</div>
-	<?php endif; ?>
 </div>
 
 <div class="w3-twothird">
@@ -165,7 +156,7 @@
 				</select>
 				<div class="w3-section w3-center-align">
 					<button class="w3-btn w3-theme">Reset</button>
-					<button class="w3-btn w3-theme type="submit">Save Changes</button>
+					<button class="w3-btn w3-theme" type="submit">Save Changes</button>
 				</div>
 				<div class="w3-row-padding">&nbsp;</div>
 			</div>

@@ -12,10 +12,7 @@
 			
 			//set the page name
 			$data["title"] = ucfirst($page); // Capitalize the first letter
-			
-			$filter = array("active" => TRUE);
-			$data["people"] = $this->people_model->get_people($filter);
-			
+
 			//$this->load->view("templates/header_small", $data);
 			$this->load->view("templates/top_menu", $data);
 			$this->load->view("people/index", $data);

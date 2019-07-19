@@ -62,6 +62,10 @@ $route['events'] = 'events';
 $route['person/(:any)'] = 'people/person/$1';
 $route['people'] = 'people';
 
+//List search routes
+$route['search/people'] = 'search/people';
+$route['search/addresses'] = 'search/addresses';
+
 //Administration routes
 $route['manage_users/assign'] = 'Users/assign';
 $route['manage_users/set_assign/(:any)'] = 'Users/set_assign/$1';

@@ -10,10 +10,10 @@
 	<link rel="stylesheet" href="<?php echo $css . "font-awesome.min.css"; ?>">
 	<link rel="stylesheet" href="<?php echo $css . "select2.css"; ?>">
 	<script src="<?php echo $js . "jquery-3.4.0.min.js"; ?>"></script>
-	<script src="<?php echo $js . "data.dummy.js"; ?>"></script>
+	<!--<script src="<?php //echo $js . "data.dummy.js"; ?>"></script>-->
 	<script src="<?php echo $js . "template-controls.js"; ?>"></script>
 	<script src="<?php echo $js . "autocomplete.js"; ?>"></script>
-	<script src="<?php echo $js . "select2.js"; ?>"></script>
+	<script src="<?php echo $js . "select2.full.js"; ?>"></script>
 	<script src="<?php echo $js . "selects.js"; ?>"></script>
 	<script src="<?php echo $js . "contactinfo.control.js"; ?>"></script>
 </head>
