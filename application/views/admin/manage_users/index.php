@@ -1,5 +1,5 @@
-<div class="w3-container" style="overflow-x:auto;">
-	<table class="w3-table w3-striped w3-bordered w3-usertable w3-hoverable">
+<div class="w3-container w3-single-half w3-card" style="overflow-x:auto;">
+	<table class="w3-table w3-striped w3-bordered w3-hoverable">
 		<thead>
 			<tr class="w3-theme">
 			  <th class="w3-center"><a href="<?php echo $base_url; ?>manage_users/assign" target="_self" title="Assign User"><i class="fa fa-plus-square-o"></i> New User</a></th>

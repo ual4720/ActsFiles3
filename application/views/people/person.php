@@ -126,7 +126,65 @@
 				<tfoot>
 					<tr>
 						<td colspan="5" style="text-align: left;">
-							<input type="button" class="w3-btn w3-theme" id="addrow" value="Add Row" />
+							<input type="button" class="w3-btn w3-theme" id="addContactRow" value="Add Row" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<div class="w3-container">
+								<div class="w3-section w3-right-align">
+									<button class="w3-btn w3-theme" type="reset">Reset</button>
+									<button class="w3-btn w3-theme" type="submit">Save Changes</button>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	  </div>
+	</div>
+	<div class="w3-row-padding">&nbsp;</div>
+	<button onclick="myAccFunc('AddressInformation')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align">Address Information</button>
+	<div id="AddressInformation" class="w3-border w3-hide">
+	<div class="w3-container" style="overflow-x:auto;">
+		<div class="w3-section" style="min-width:650px;">
+			<table id="AddressInformationTable" class="w3-table table order-list">
+				<thead>
+					<tr>
+						<td>Type</td>
+						<td>Address</td>
+						<td>Home</td>
+						<td>Mailing</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<select name="addressType" data-placeholder="Choose a Type..." class="w3-select">
+								<option value=""></option>
+								<option value="physical">mobile</option>
+								<option value="mailing">email</option>
+							</select>
+						</td>
+						<td>
+							<input type="text" name="addressID"  class="w3-input"/>
+						</td>
+						<td>
+							<input type="checkbox" name="addressHome" class="w3-check" />
+						</td>
+						<td>
+							<input type="checkbox" name="addressMailing" class="w3-check" />
+						</td>
+						<td>
+							&nbsp;
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="5" style="text-align: left;">
+							<input type="button" class="w3-btn w3-theme" id="addAddressRow" value="Add Row" />
 						</td>
 					</tr>
 					<tr>

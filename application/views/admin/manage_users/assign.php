@@ -1,4 +1,4 @@
-<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-row-padding w3-single-half w3-center w3-margin-top">
 	<div class="w3-card w3-container" style="min-height:460px">
 	  <h3>Account Snapshot</h3><br>
 	  <i class="fa fa-id-card w3-margin-bottom w3-text-theme" style="font-size:120px"></i>

@@ -22,10 +22,10 @@ function PopulateSelect2(selectID, source, multiSelect = false)
 	(
 		{
 			placeholder: '--- Select Item ---',
+			multiple: multiSelect,
 			ajax: {
 			url: source,
 			dataType: 'json',
-			multiple: multiSelect,
 			delay: 250,
 			processResults: function (data) {
 				return {

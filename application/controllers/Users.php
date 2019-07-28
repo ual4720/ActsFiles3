@@ -22,6 +22,7 @@
 			if($this->form_validation->run() === FALSE)
 			{
 				//set data
+				//echo $this->config->item("base_url");
 				$data["target"] = $this->config->item("base_url")."manage_users/disable/".$user;
 				$data["person"] = $this->people_model->get_people(FALSE, $user);
 				

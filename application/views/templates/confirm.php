@@ -1,4 +1,4 @@
-<div class="w3-half w3-div-center">
+<div class="w3-single-half">
 	<div class="w3-container w3-failed w3-center w3-padding-16"><?php if(!isset($message)) $message = "Are you sure you wish to continue?"; echo $message; ?></div>
 	<div class="w3-container w3-margin w3-red">
 		<?php echo validation_errors(); ?>

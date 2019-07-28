@@ -19,14 +19,14 @@
 
 				$this->db->select("id, profile, first_name, nickname, last_name, birthday");
 				
-				if($active)
-					$this->db->where("active = true");
+				$this->db->where("concat_ws(' ', first_name, last_name) like '%".$filter."%' OR concat_ws(' ', first_name, nickname, last_name) like '%".$filter."%'");
 
-				$this->db->group_start();
-				$this->db->like('first_name',$filter);
-    			$this->db->or_like('last_name',$filter);
-				$this->db->or_like('nickname',$filter);
-				$this->db->group_end();
+				if($active)
+					$this->db->and_where("active = true");
+
+				$this->db->order_by("first_name", "ASC");
+				$this->db->order_by("last_name", "ASC");
+				$this->db->order_by("birthday", "ASC");
 				$this->db->limit(10);
 				$query = $this->db->get("people");
 				$people = $query->result_array();
@@ -54,7 +54,7 @@
 						$tmpPerson['text'] .= " '" . $person["nickname"] . "'";
 
 					$tmpPerson['text'] .= " " . $person["last_name"];
-					$tmpPerson['text'] .= "(" . $person["age"] . ")";
+					$tmpPerson['text'] .= "(a:" . $person["age"] . ")";
 					//echo $tmpPerson["id"] . " => " . $tmpPerson["text"];
 
 					array_push($tmpPeople, $tmpPerson);

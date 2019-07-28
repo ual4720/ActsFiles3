@@ -15,6 +15,6 @@
 	<script src="<?php echo $js . "autocomplete.js"; ?>"></script>
 	<script src="<?php echo $js . "select2.full.js"; ?>"></script>
 	<script src="<?php echo $js . "selects.js"; ?>"></script>
-	<script src="<?php echo $js . "contactinfo.control.js"; ?>"></script>
+	<script src="<?php echo $js . "table-data.control.js"; ?>"></script>
 </head>
 <body>
