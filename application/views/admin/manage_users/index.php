@@ -22,6 +22,7 @@
 				<td class="w3-center">
 					<a href="<?php echo $base_url; ?>person/<?php echo $user["id"]; ?>" target="_blank" title="View <?php echo $user["first_name"]."'s"; ?> Profile"><i class="fa fa-id-card-o"></i></a>
 					 | <a href="#" target="_blank" title="View <?php echo $user["first_name"]."'s"; ?> User Activity"><i class="fa fa-list-alt"></i></a>
+					 | <a href="<?php echo $base_url; ?>manage_users/set_permissions/<?php echo $user["id"]; ?>" target="_self" title="Set <?php echo $user["first_name"]."'s"; ?> Permissions"><i class="fa fa-exclamation-triangle"></i></a>
 					 | <a href="<?php echo $base_url; ?>manage_users/disable/<?php echo $user["id"]; ?>" target="_self" title="Disable <?php echo $user["first_name"]."'s"; ?> Account"><i class="fa fa-ban"></i></a>
 				</td>
 			</tr>

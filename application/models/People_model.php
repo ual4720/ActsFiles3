@@ -106,6 +106,17 @@
 				
 				if($person["profile"] == NULL)
 					if($person["profile"] = base_url($this->config->item("profiles") . "default.png"));
+
+				if(!isset($person["full_name"]))
+				{
+					$fullName = $person["first_name"];
+					if(isset($person["middle_name"]) && $person["middle_name"] != "")
+						$fullName .= " " . $person["middle_name"];
+					if(isset($person["last_name"]) && $person["last_name"] != "")
+						$fullName .= " " . $person["last_name"];
+					
+					$person["full_name"] = $fullName;
+				}
 			}
 			
 			return $person;

@@ -68,6 +68,7 @@ $route['search/addresses'] = 'search/addresses';
 
 //Administration routes
 $route['manage_users/assign'] = 'Users/assign';
+$route['manage_users/set_permissions/(:any)'] = 'Users/set_permissions/$1';
 $route['manage_users/set_assign/(:any)'] = 'Users/set_assign/$1';
 $route['manage_users/disable/(:any)'] = 'Users/disable/$1';
 $route['manage_users'] = 'admin/manage_users';

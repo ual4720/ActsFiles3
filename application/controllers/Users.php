@@ -67,7 +67,7 @@
 			$this->load->view("templates/footer", $data);
 		}
 		
-		public function set_assign($user = FALSE, $page = "User Status Assigned")
+		public function set_assign($user = FALSE, $page = "Assign User")
 		{
 			//Page properties
 			$data["title"] = ucfirst($page); // Capitalize the first letter
@@ -77,7 +77,7 @@
 			$data["person"] = $this->people_model->get_people(FALSE, $user);
 			
 			//Form actions
-			$data["target"] = $this->config->item("base_url")."manage_users/set_assign/".$user;
+			$data["target"] = "manage_users/set_assign/".$user; // dont use $this->config->item("base_url"). with confirm since form helper already loads site url.
 			$data["return_path"] = $this->config->item("base_url")."manage_users/assign";
 			
 			//Form properties
@@ -92,7 +92,7 @@
 			if($this->form_validation->run() === FALSE)
 			{
 				//set data
-				$data["target"] = $this->config->item("base_url")."manage_users/set_assign/".$user;
+				$data["target"] = "manage_users/set_assign/".$user;// dont use $this->config->item("base_url"). with confirm since form helper already loads site url.
 				$data["person"] = $this->people_model->get_people(FALSE, $user);
 				
 				$data["message"] = "Do you wish to enable " . $data["person"]["first_name"] . "'s User Access?";
@@ -112,8 +112,9 @@
 				$data["person"] = $this->people_model->get_people(FALSE, $user);
 				if($this->people_model->set_user($user, TRUE)){
 					
-					$data["return_path"] = $this->config->item("base_url")."manage_users";
-					$data["message"] = "<p>".$data["person"]["first_name"] . " was successfully set as a user.</p><p>You will need to provide the user their username and password before they can login.</p>";
+					//$data["return_path"] = $this->config->item("base_url")."manage_users";
+					$data["return_path"] = $this->config->item("base_url")."manage_users/set_permissions/".$user;
+					$data["message"] = "<p>".$data["person"]["first_name"] . " was successfully set as a user.</p><p>Continue to set permissions.</p>";
 					//$this->load->view("templates/header_small", $data);
 					$this->load->view("templates/top_menu", $data);
 					$this->load->view("templates/success", $data);
@@ -129,4 +130,18 @@
 			}
 		}
 		
+		public function set_permissions($user = FALSE, $page = "User Permissions")
+		{
+			//Page properties
+			$data["title"] = ucfirst($page); // Capitalize the first letter
+			$data["top_menu"] = $this->nav_model->get_nav("top_menu");
+			
+			//Get person
+			$data["person"] = $this->people_model->get_people(FALSE, $user);
+
+			//Include the footer
+			$this->load->view("templates/top_menu", $data);
+			$this->load->view("admin/manage_users/permissions", $data);
+			$this->load->view("templates/footer", $data);
+		}
 	}
