@@ -54,7 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route["news"] = "news";
 
 //Event routes
-$route['events/(:any)'] = 'events/event/$1';
+$route['events/(:any)'] = 'events/$1';
+$route['events/checkin/(:any)'] = 'events/checkin/$1)';
 $route['events'] = 'events';
 
 //People routes
@@ -65,6 +66,7 @@ $route['people'] = 'people';
 //List search routes
 $route['search/people'] = 'search/people';
 $route['search/addresses'] = 'search/addresses';
+$route['search/events'] = 'search/events';
 
 //Administration routes
 $route['manage_users/assign'] = 'Users/assign';

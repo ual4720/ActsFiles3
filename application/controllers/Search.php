@@ -43,4 +43,14 @@
 			$json = json_encode($this->address_model->get_addresses("", false, true));
 			echo $json;
 		}
+
+		public function events()
+		{
+			//Load the Event model
+			$this->load->model("event_model");
+
+			$json = [];
+			$json = json_encode($this->address_model->get_events("", false, true));
+			echo $json;
+		}
     }
